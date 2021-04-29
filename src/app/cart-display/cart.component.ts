@@ -3,7 +3,7 @@ import { Output } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { BookStore } from '../app.component';
+
 
 @Component({
   selector: 'app-cart',
