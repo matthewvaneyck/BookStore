@@ -1,0 +1,45 @@
+<div class="static-frame">
+    <button mat-icon-button (click)="cancelPopupEventHandler()">
+      <mat-icon class="material-icons ts3-grey-icons">close</mat-icon>
+    </button>
+  
+</div>
+  
+  <div class="register-container">
+    <mat-spinner *ngIf="isLoading" [diameter]="70"></mat-spinner>
+    <form #loginForm="ngForm"  autocomplete="off">
+      <mat-form-field class="form-field bot-field" appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input type="text" name="firstname" matInput required [(ngModel)]="firstName" #usernameTemplate="ngModel" />
+      </mat-form-field>
+      
+      <mat-form-field class="form-field bot-field" appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input type="text" name="lastname" matInput required [(ngModel)]="lastName" #usernameTemplate="ngModel" />
+      </mat-form-field>
+      
+      <mat-form-field class="form-field bot-field" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input type="text" name="email" matInput required [(ngModel)]="email" #usernameTemplate="ngModel" />
+      </mat-form-field>
+      
+      
+      <mat-form-field class="form-field bot-field" appearance="outline">
+        <mat-label>Password</mat-label>
+        <input type="password" [ngClass]="{ 'danger-text': passwordInvalid }" name="password" matInput required [(ngModel)]="password" #usernameTemplate="ngModel" />
+      </mat-form-field>
+      
+      <mat-form-field class="form-field bot-field" appearance="outline">
+        <mat-label>Confirm Password</mat-label>
+        <input type="password" [ngClass]="{ 'danger-text': passwordInvalid }" name="password" matInput required  (ngModelChange)="checkPassword()" [(ngModel)]="confirmPassword" #usernameTemplate="ngModel" />
+      </mat-form-field>
+      
+      <button mat-raised-button class='sign-up-button' [disabled]="isLoading"
+         (click)="register()">
+        <span style="margin: auto;">Register</span> 
+    </button>
+    </form>
+    
+  </div>
+  
+  

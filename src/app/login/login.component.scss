@@ -1,0 +1,49 @@
+.static-frame {
+   display: flex;
+   align-self: flex-end;
+    cursor: pointer;
+    float: right;
+}
+
+:host ::ng-deep .mat-form-field {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 5px;
+    padding: .5em 0;
+}
+
+:host ::ng-deep .mat-form-field-infix {
+    display: block;
+    position: relative;
+    flex: auto;
+    min-width: 0;
+    width: 180px;
+}
+
+:host ::ng-deep .mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 1em 0 1em 0;
+}
+
+:host ::ng-deep .mat-dialog-container {
+   border: 2px solid purple;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+}
+
+.sign-in-button {
+    display: flex;
+    width: 100%;
+    padding: 8px;
+    max-width: 500px;
+}
+
+
+
+mat-spinner { 
+    width: 70px;
+    height: 70px;
+    margin: auto;
+}

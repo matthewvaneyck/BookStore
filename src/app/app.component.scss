@@ -1,0 +1,45 @@
+* {
+  margin: auto;
+  padding: 10px;
+  // border: 3px solid green;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+      display: flex;
+    width: 100%;
+    height: 100%;
+    border: 2px solid;
+  }
+  
+  .content-area {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    border: 1px solid red;
+    
+  }
+  
+  .top-navigation {
+    display: flex;
+    border: 1px solid blue;
+    
+    
+    .account-section{
+      display: flex;
+    }
+    
+    .account-section > button {
+      display: flex;
+    align-items: center;
+    }
+    
+    .badge-btn {
+      line-height: 60px;
+    }
+  }

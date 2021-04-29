@@ -1,0 +1,34 @@
+<div class="static-frame">
+  <button mat-icon-button (click)="cancelPopupEventHandler()">
+    <mat-icon class="material-icons ts3-grey-icons">close</mat-icon>
+  </button>
+
+</div>
+
+<div class="login-container">
+
+  <form #loginForm="ngForm" class="login-form" autocomplete="off">
+    <mat-spinner *ngIf="isLoading" [diameter]="70"></mat-spinner>
+    <mat-form-field class="form-field bot-field" appearance="outline">
+      <mat-label>Email</mat-label>
+      <input type="text" name="email" matInput required [(ngModel)]="email" #usernameTemplate="ngModel" />
+    </mat-form-field>
+    <div *ngIf="usernameTemplate.touched && !usernameTemplate.valid" class="field-error">
+      <span class="field-error" *ngIf="usernameTemplate?.errors?.required">Email is required</span>
+    </div>
+    <mat-form-field class="form-field" appearance="outline">
+      <mat-label>Password</mat-label>
+      <input type="password" name="password" matInput [(ngModel)]="password" required #passwordTemplate="ngModel">
+    </mat-form-field>
+    <div *ngIf="passwordTemplate.touched && !passwordTemplate.valid" class="field-error">
+      <span class="field-error" *ngIf="passwordTemplate?.errors?.required">Password is required</span>
+    </div>
+    <span style="justify-content: center; color: red; display: flex;">{{errorMessage}}</span> 
+    <button mat-raised-button class='sign-in-button'
+      [ngClass]="{'disabled' : !email || !password, 'teal-button': email && password}"
+      [disabled]="!email || !password || isLoading" (click)="signInDirect()">
+     <span style="margin: auto;">Sign in</span> 
+    </button>
+  
+  </form>
+</div>

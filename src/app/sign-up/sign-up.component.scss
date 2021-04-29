@@ -1,0 +1,45 @@
+.danger-text {
+    color: #ff4d4d !important;
+  }
+  
+  .register-container {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+  }
+  
+  :host ::ng-deep .mat-form-field {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 5px;
+    padding: .5em 0;
+}
+
+:host ::ng-deep .mat-form-field-infix {
+    display: block;
+    position: relative;
+    flex: auto;
+    min-width: 0;
+    width: 180px;
+}
+
+.static-frame {
+    display: flex;
+    align-self: flex-end;
+     cursor: pointer;
+     float: right;
+ }
+ 
+ .sign-up-button {
+    display: flex;
+    width: 100%;
+    padding: 8px;
+    max-width: 500px;
+    margin: auto;
+}
+
+mat-spinner { 
+    width: 70px;
+    height: 70px;
+    margin: auto;
+}
